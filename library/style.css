@@ -1,0 +1,44 @@
+#cars-home{
+	margin-top:20% ;
+}
+
+body{
+	background-color: #EDBB99;	
+}
+
+a{
+	color: white;
+}
+
+a:hover{
+	color: black;
+}
+
+ul{
+	margin-top: 1%;
+	margin-right: 1%;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link, button, a.btn.btn-block {
+    background-color: #DC7633;
+    color: white;
+}
+
+label{
+	color: #6E2C00;
+}
+
+#linhaForm{
+	padding-top: 10%; 
+}
+
+thead{
+	color: white;
+	background-color:  #DC7633;
+}
+
+
+table{
+	margin-top: 5%;
+	margin-left: auto;
+}

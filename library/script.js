@@ -14,6 +14,9 @@ function cadastrar(){
 
 	var livro = new Livro(d_titulo, d_autor, d_numPaginas, d_status);
 
+	livros.push(livro);
+	alert("teste", livro.titulo);
+
 	var tabela = document.getElementById("tabela");
 	var linha = tabela.insertRow(1);
 
@@ -26,6 +29,12 @@ function cadastrar(){
 	c_autor.innerHTML = livro.autor;
 	c_numPaginas.innerHTML = livro.numPaginas;
 	c_status.innerHTML = livro.status;
+
+}
+
+function criarArray(){
+	var livros = new Array();
+	alert("TUDO CERTO UHU");
 
 }
 
