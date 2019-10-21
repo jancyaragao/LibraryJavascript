@@ -1,17 +1,5 @@
-#cars-home{
-	margin-top:20% ;
-}
-
 body{
 	background-color: #EDBB99;	
-}
-
-a{
-	color: white;
-}
-
-a:hover{
-	color: black;
 }
 
 ul{
@@ -37,6 +25,9 @@ thead{
 	background-color:  #DC7633;
 }
 
+#pesquisa{
+	margin-top: 40px;
+}
 
 table{
 	margin-top: 5%;

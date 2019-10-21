@@ -35,3 +35,21 @@ function removerLinha(linha) {
 	var i = linha.parentNode.parentNode.rowIndex;
 	document.getElementById('tabela').deleteRow(i);
 }
+
+function pesquisarLivro() {
+	var tituloDoLivro, tabela, tr, td, i, txtValue;
+	tituloDoLivro = document.getElementById("pesquisa").value.toUpperCase();
+	tabela = document.getElementById("tabela");
+	tr = tabela.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++) {
+	  td = tr[i].getElementsByTagName("td")[0];
+	  if (td) {
+		txtValue = td.textContent || td.innerText;
+		if (txtValue.toUpperCase().indexOf(tituloDoLivro) > -1) {
+		  tr[i].style.display = "";
+		} else {
+		  tr[i].style.display = "none";
+		}
+	  }       
+	}
+  }
