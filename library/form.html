@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro</title>
+
+		<script src="script.js"></script>
+		<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"> 
+				<form>
+					<div class="form-group">
+						<label for="titulo">Título: </label>
+						<input class="form-control" type="text" id="titulo">
+
+						<label for="autor">Autor: </label>
+						<input class="form-control" type="text" id="autor">
+
+						<label for="numPaginas">Número de páginas: </label>
+						<input class="form-control" type="text" id="numPaginas">
+
+						<label for="status">Status de leitura: </label>
+						<select class="form-control" type="text" id="status">
+							<option>Leitura Desejada</option>
+							<option>Leitura Atual</option>
+							<option>Leitura Concluída</option>
+						</select>		
+					</div>
+				</form>
+
+				<a href="list.html"> <button type="submit" class="btn btn-primary" onclick="cadastrar()"> Cadastrar  </button> </a>
+				
+
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
