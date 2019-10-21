@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Library</title>
-</head>
-<body>
 
-    <div>
-        <a href="html/new_book.html">New Book!</a>
-        <a href="html/book_list.html">Book List!</a>
-    </div>
-    
+<html>
+<head>
+	<title>Biblioteca</title>
+
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<ul class="nav nav-pills justify-content-end" id="nav">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="index.html">Home</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="html/form.html">Cadastro</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="html/list.html">Consulta</a>
+		  </li>
+	</ul>
+	<br>
+	<div class="container" id="cards-home">
+		<div class="row">
+		  <div class="col-sm-2"></div>	
+		  <div class="col-sm-4">
+		    <div class="card bg-light mb-3">
+		    <img class="card-img-top" src="img/lb.jpg" alt="Imagem de capa do card" height="300px">
+		      <div class="card-body">
+		        <h5 class="card-title">Cadastre um novo livro</h5>
+		        <a href="html/form.html" class="btn btn-block">Cadastrar</a>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card bg-light mb-3">
+		    <img class="card-img-top" src="img/lb2.jpg" alt="Imagem de capa do card" height="300px">
+		      <div class="card-body">
+		        <h5 class="card-title">Consulte o acervo</h5>
+		        <a href="html/list.html" class="btn btn-block">Consultar</a>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-2"></div>
+		</div>
+
+	</div>
+
+
 </body>
 </html>
