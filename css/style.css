@@ -23,13 +23,29 @@ label{
 thead{
 	color: white;
 	background-color:  #DC7633;
+	padding: 0;
 }
 
-#pesquisa{
-	margin-top: 40px;
+#espaco{
+	margin-top: 5%;
 }
 
 table{
 	margin-top: 5%;
 	margin-left: auto;
+}
+
+#remover{
+	background-color: white;
+	color:  #DC7633;
+}
+
+#card{
+	padding: 6%;
+	border-radius: 5%;
+}
+
+td{
+	background-color: #EDBB99;
+	color:  #6E2C00;
 }

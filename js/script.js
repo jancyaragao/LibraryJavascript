@@ -28,7 +28,7 @@ function adicionarLivroNaLista(idTabela, livro) {
 	coluna2.innerHTML = livro.autor;
 	coluna3.innerHTML = livro.numPaginas;
 	coluna4.innerHTML = livro.status;
-	coluna5.innerHTML = "<button onclick='removerLinha(this)'>Remover</button>";
+	coluna5.innerHTML = "<button class='btn btn-sm' onclick='removerLinha(this)' id='remover'>Remover</button>";
 }
 
 function removerLinha(linha) {

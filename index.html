@@ -11,62 +11,62 @@
 
 <body>
 	<div class="container">
+		<div class="row container  d-flex justify-content-center align-items-center container" id="linhaForm">
+			<div class="col-sm-9"> 
+				<div class="card" id="card">
+					<h3> Cadastro de livros </h3> <br>
+					<form>
+						<div class="form-group">
 
-		<div class="row d-flex justify-content-center align-items-center container" id="linhaForm">
-			<div class="col-sm-6"> 
-				<form>
-					<div class="form-group">
+							<label for="titulo">Título: </label>
+							<input class="form-control" type="text" id="titulo">
 
-						<label for="titulo">Título: </label>
-						<input class="form-control" type="text" id="titulo">
+							<label for="autor">Autor: </label>
+							<input class="form-control" type="text" id="autor">
 
-						<label for="autor">Autor: </label>
-						<input class="form-control" type="text" id="autor">
+							<label for="numPaginas">Número de páginas: </label>
+							<input class="form-control" type="number" id="numPaginas">
 
-						<label for="numPaginas">Número de páginas: </label>
-						<input class="form-control" type="number" id="numPaginas">
+							<label for="status">Status de leitura: </label>
+							<select class="form-control" type="text" id="status">
+								<option>Leitura Desejada</option>
+								<option>Leitura Atual</option>
+								<option>Leitura Concluída</option>
+							</select>	
+						</div> 					
+					</form>				
+					<button class="btn" onclick="cadastrar()">Cadastrar</button>
+				</div>
+			</div>
+		</div>
 
-						<label for="status">Status de leitura: </label>
-						<select class="form-control" type="text" id="status">
-							<option>Leitura Desejada</option>
-							<option>Leitura Atual</option>
-							<option>Leitura Concluída</option>
-						</select>	
+		<div class="row"> <div class="col-sm-12" id="espaco"> </div> </div>
 
-					</div> 
+		<div class="row container  d-flex justify-content-center align-items-center container">		
+			<div class="col-sm-9">
+				<div class="card" id="card">
+					<h3> Listagem de livros </h3> <br>
+
+					<input class="form-control" type="text" id="pesquisa" onkeyup="pesquisarLivro()" placeholder="Pesquisar por título">
+
+						<table class="table table-bordless" id="tabela"><br>	
+							<thead>
+								<th scope="col"> Título </th>
+								<th scope="col"> Autor </th>
+								<th scope="col"> Número de páginas </th>
+								<th scope="col"> Status </th>
+								<th scope="col"> Remover </th>
+							</thead>	
 						
-				</form>
-				
-				<button class="btn" onclick="cadastrar()">Cadastrar</button>
-
-			</div>
+							<tbody id="body_tabela">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>	
 		</div>
-
-		<div class="row d-flex justify-content-center align-items-center container">
-			<div class="col-sm-6">
-				<input class="form-control" type="text" id="pesquisa" onkeyup="pesquisarLivro()" placeholder="Pesquisar por título">
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-sm-12">
-				<table class="table" id="tabela">
-					<thead>
-						<th scope="col"> Titulo </th>
-						<th scope="col"> Autor </th>
-						<th scope="col"> Número de páginas </th>
-						<th scope="col"> Status </th>
-						<th scope="col"> Remover </th>
-					</thead>	
-					<tbody id="body_tabela">
-						
-					</tbody>
-				</table>
-			</div>
-		</div>
-
 	</div>
-
 
 </body>
 </html>
