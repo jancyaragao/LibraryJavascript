@@ -10,40 +10,53 @@
 </head>
 
 <body>
-	<ul class="nav nav-pills justify-content-end" id="nav">
-		  <li class="nav-item">
-		    <a class="nav-link active" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="html/form.html">Cadastro</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="html/list.html">Consulta</a>
-		  </li>
-	</ul>
-	<br>
-	<div class="container" id="cards-home" onload="criarArray()">
+	<div class="container">
+
+		<div class="row d-flex justify-content-center align-items-center container" id="linhaForm">
+			<div class="col-sm-6"> 
+				<form>
+					<div class="form-group">
+
+						<label for="titulo">Título: </label>
+						<input class="form-control" type="text" id="titulo">
+
+						<label for="autor">Autor: </label>
+						<input class="form-control" type="text" id="autor">
+
+						<label for="numPaginas">Número de páginas: </label>
+						<input class="form-control" type="number" id="numPaginas">
+
+						<label for="status">Status de leitura: </label>
+						<select class="form-control" type="text" id="status">
+							<option>Leitura Desejada</option>
+							<option>Leitura Atual</option>
+							<option>Leitura Concluída</option>
+						</select>	
+
+					</div> 
+						
+				</form>
+				
+				<button class="btn" onclick="cadastrar()">Cadastrar</button>
+
+			</div>
+		</div>
+
 		<div class="row">
-		  <div class="col-sm-2"></div>	
-		  <div class="col-sm-4">
-		    <div class="card bg-light mb-3">
-		    <img class="card-img-top" src="img/lb.jpg" alt="Imagem de capa do card" height="300px">
-		      <div class="card-body">
-		        <h5 class="card-title">Cadastre um novo livro</h5>
-		        <a href="html/form.html" class="btn btn-block">Cadastrar</a>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-4">
-		    <div class="card bg-light mb-3">
-		    <img class="card-img-top" src="img/lb2.jpg" alt="Imagem de capa do card" height="300px">
-		      <div class="card-body">
-		        <h5 class="card-title">Consulte o acervo</h5>
-		        <a href="html/list.html" class="btn btn-block" onclick="listar()">Consultar</a>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-2"></div>
+			<div class='col-sm-12'>
+				<table class="table" id="tabela">
+					<thead>
+						<th scope="col"> Titulo </th>
+						<th scope="col"> Autor </th>
+						<th scope="col"> Número de páginas </th>
+						<th scope="col"> Status </th>
+						<th scope="col"> Remover </th>
+					</thead>	
+					<tbody id="body_tabela">
+						
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 	</div>

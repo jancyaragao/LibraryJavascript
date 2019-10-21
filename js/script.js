@@ -1,60 +1,37 @@
-
-function Livro(titulo, autor, numPaginas, status){
+function Livro(titulo, autor, numPaginas, status) {
 	this.titulo = titulo;
 	this.autor = autor;
 	this.numPaginas = numPaginas;
 	this.status = status;
 }
 
-function cadastrar(){
-	var d_titulo = document.getElementById("titulo").val();
-	var d_autor = document.getElementById("autor").val();
-	var d_numPaginas = document.getElementById("numPaginas").val();
-	var d_status = document.getElementById("status").val();
+function cadastrar() {
+	var d_titulo = document.getElementById("titulo").value;
+	var d_autor = document.getElementById("autor").value;
+	var d_numPaginas = document.getElementById("numPaginas").value;
+	var d_status = document.getElementById("status").value;
 
-	console.log(d_titulo);
-	
 	var livro = new Livro(d_titulo, d_autor, d_numPaginas, d_status);
 
-	livros = criarArray();
-
-	livros.push(livro);
-	alert("teste" + livro.titulo);
-
-	
-	/*var linha = tabela.insertRow(1);
-
-	var c_titulo = linha.insertCell(0);
-	var c_autor = linha.insertCell(1);
-	var c_numPaginas = linha.insertCell(2);
-	var c_status = linha.insertCell(3);*/
+	adicionarLivroNaLista("tabela", livro);
 }
 
-function listar(){
-	alert('hmm ok');
-	/*for(i = 0; i < livros.length; i++){
-		c_titulo.innerHTML = livros[i].titulo;
-		c_autor.innerHTML = livros[i].autor;
-		c_numPaginas.innerHTML = livros[i].numPaginas;
-		c_status.innerHTML = livros[i].status;
-
-	}*/
-
-    var tabela = '<tbody>'
-    for(i = 0;i < mainObj.length; i++){
-        tabela+= '<tr>';
-        tabela+= '<td>' + livros[i].titulo + '</td>';
-        tabela+= '<td>' + livros[i].autor + '</td>';
-        tabela+= '<td>' + livros[i].numPaginas + '</td>';
-        tabela+= '<td>' + livros[i].status + '</td>';
-        tabela+= '</tr>';
-    }
-    tabela+='</tbody>';
-    document.getElementById("tabela").innerHTML = tabela;
-
+function adicionarLivroNaLista(idTabela, livro) {
+	var tabela = document.getElementById(idTabela);
+	var linha = tabela.insertRow();
+	var coluna1 = linha.insertCell(0);
+	var coluna2 = linha.insertCell(1);
+	var coluna3 = linha.insertCell(2);
+	var coluna4 = linha.insertCell(3);
+	var coluna5 = linha.insertCell(4);
+	coluna1.innerHTML = livro.titulo;
+	coluna2.innerHTML = livro.autor;
+	coluna3.innerHTML = livro.numPaginas;
+	coluna4.innerHTML = livro.status;
+	coluna5.innerHTML = "<button onclick='removerLinha(this)'>Remover</button>";
 }
 
-function criarArray(){
-	var livros = new Array();
-	return livros;
+function removerLinha(linha) {
+	var i = linha.parentNode.parentNode.rowIndex;
+	document.getElementById('tabela').deleteRow(i);
 }
