@@ -11,6 +11,30 @@
 
 <body> 
 
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+	<script>
+	// Your web app's Firebase configuration
+	var firebaseConfig = {
+		apiKey: "AIzaSyBiNjf0HJCaPulm0TvVjkiWlefGhTz1v9I",
+		authDomain: "libraryvuejs.firebaseapp.com",
+		databaseURL: "https://libraryvuejs.firebaseio.com",
+		projectId: "libraryvuejs",
+		storageBucket: "libraryvuejs.appspot.com",
+		messagingSenderId: "1024055257635",
+		appId: "1:1024055257635:web:9486254fe732202ed99f96",
+		measurementId: "G-6VY99B9EZQ"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	</script>
+
 	<div id="app">
 		<div class="container" id="form">
 			<div class="row container  d-flex justify-content-center align-items-center container" id="linhaForm">
@@ -63,7 +87,7 @@
 							</thead>	
 								
 							<tbody id="body_tabela">
-								<tr v-for="(livro, index) in livros">
+								<tr v-for="(livro, index) in livrosPesquisa">
 									<td> {{ livro.titulo }}</td>
 									<td> {{ livro.autor }}</td>
 									<td> {{ livro.numPaginas }}</td>

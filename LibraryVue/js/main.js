@@ -7,7 +7,7 @@ var app = new Vue({
 
 	//aqui é o valor que a gente vai passar
 	data: {
-		termoBusca: '',
+		termoBusca: " ",
 		livros: [],
 		titulo: '',
 		autor: '',
@@ -30,6 +30,7 @@ var app = new Vue({
 
 	methods:{
 		adicionarLivro: function(){
+			//firebase.auth().
 			this.livros.push({ titulo: this.titulo, autor: this.autor, numPaginas: this.numPaginas, status: this.status }),
 			this.titulo = null,
 			this.autor = null,
